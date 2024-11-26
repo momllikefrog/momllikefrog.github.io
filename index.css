@@ -1,0 +1,93 @@
+/* styles.css */
+/* index.css */
+
+header {
+    background-color: #dedabc; /* 你想要的標頭顏色 */
+    color: white; /* 文字顏色 */
+    padding: 20px; /* 內距，讓內容不貼邊 */
+    width: 100%; /* 滿版 */
+    text-align: center;
+    font-family: "Amatic SC", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+footer {
+    background-color: #333; /* 你想要的標尾顏色 */
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* 垂直排列元素 */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center; /* 文字置中 */
+}
+
+main {
+    width: 90%; /* 設定寬度為90%，讓內容適應螢幕大小 */
+    max-width: 800px; /* 最大寬度 */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 加點陰影 */
+}
+/* 跑馬燈外框 */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background-color: #f4f4f4; /* 背景顏色 */
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd; /* 外框線條 */
+    border-radius: 10px; /* 圓角框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+}
+
+
+/* 跑馬燈內容的軌道 */
+.marquee-track {
+    display: inline-flex;
+    animation: marquee-scroll 10s linear infinite; /* 10s控制滾動速度，可調整 */
+}
+
+/* 跑馬燈內的圖片 */
+.marquee-track img {
+    height: 10px; /* 圖片高度，可根據需求調整 */
+    margin-right: 10px; /* 圖片之間的間距 */
+    border-radius: 8px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 圖片陰影 */
+}
+
+/* 動畫效果 */
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(100%); /* 從右側開始 */
+    }
+    to {
+        transform: translateX(-100%); /* 移動到左側 */
+    }
+}
+
+@media (max-width: 768px) {
+    .marquee-track img {
+        height: 100px; /* 減小圖片高度 */
+    }
+
+    .sidebar {
+        width: 200px; /* 縮小側邊欄寬度 */
+    }
+
+    .menu-icon {
+        top: 10px;
+        left: 10px;
+    }
+}
+
